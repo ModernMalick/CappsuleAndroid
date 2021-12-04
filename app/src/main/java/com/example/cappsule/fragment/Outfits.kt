@@ -58,14 +58,6 @@ class Outfits : Fragment(), OutfitRecyclerAdapter.OnClickListener {
         outfitRecyclerAdapter = OutfitRecyclerAdapter(activity!!, outfits, databaseHelperOutfit, this)
         recyclerview.adapter = outfitRecyclerAdapter
 
-        val pullToRefresh: SwipeRefreshLayout = view.findViewById(R.id.swiperefresh)
-        pullToRefresh.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
-            override fun onRefresh(){
-                populateDataSet() // your code
-                pullToRefresh.isRefreshing = false
-            }
-        })
-
         return view
     }
 
