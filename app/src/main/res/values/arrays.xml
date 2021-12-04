@@ -1,0 +1,37 @@
+<resources>
+    <string-array name="article_types">
+        <item>@string/type_not_set</item>
+        <item>@string/Layer</item>
+        <item>@string/Top</item>
+        <item>@string/Bottom</item>
+        <item>@string/Shoes</item>
+    </string-array>
+
+    <string-array name="article_warmths">
+        <item>@string/warmth_unset</item>
+        <item>@string/light</item>
+        <item>@string/Both</item>
+        <item>@string/heavy</item>
+    </string-array>
+
+    <string-array name="article_types_filter">
+        <item>@string/article_type</item>
+        <item>@string/Layer</item>
+        <item>@string/Top</item>
+        <item>@string/Bottom</item>
+        <item>@string/Shoes</item>
+    </string-array>
+
+    <string-array name="article_warmths_filter">
+        <item>@string/article_warmth</item>
+        <item>@string/light</item>
+        <item>@string/Both</item>
+        <item>@string/heavy</item>
+    </string-array>
+
+    <string-array name="article_availability_filter">
+        <item>@string/Availability</item>
+        <item>@string/Available</item>
+        <item>@string/Unavailable</item>
+    </string-array>
+</resources>

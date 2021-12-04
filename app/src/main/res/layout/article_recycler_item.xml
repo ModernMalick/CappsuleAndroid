@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:app="http://schemas.android.com/apk/res-auto"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="wrap_content"
+                                              android:layout_margin="10dp"
+                                              android:background="@drawable/item_background"
+                                              android:orientation="horizontal" android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/article_recycler_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/article_image"
+        android:foreground="@drawable/image_border" android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1" android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/article_recycler_type"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/article_type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?attr/colorOnBackground"/>
+
+        <TextView
+            android:id="@+id/article_recycler_warmth"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="@string/article_warmth"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?attr/colorOnBackground"/>
+
+        <CheckBox
+            android:id="@+id/article_recycler_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/is_available" android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="?attr/colorOnBackground"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/article_recycler_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="-5dp"
+        android:backgroundTint="@color/mauve"
+        android:insetRight="0dp" android:insetBottom="0dp" app:icon="@drawable/delete" app:iconGravity="textStart"
+        app:iconPadding="0dp" app:iconSize="20dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

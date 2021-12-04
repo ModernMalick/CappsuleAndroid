@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/home_frame"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" android:hapticFeedbackEnabled="false" android:visibility="invisible"
+             tools:context=".fragment.Home">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp" android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-35dp" android:contentDescription="@string/background"
+            android:src="@drawable/item_background" app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"/>
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp" android:gravity="center"
+            android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutWeather">
+
+            <TextView
+                android:id="@+id/textViewLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/light"
+                android:textAlignment="textEnd" android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground" android:textStyle="normal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1">
+
+                <Switch
+                    android:id="@+id/outfit_warmth_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="false" android:paddingStart="0dp" android:paddingEnd="37dp"
+                    android:scaleX="1.25" android:scaleY="1.25"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewHeavy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/heavy"
+                android:textAlignment="textStart" android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <ImageView
+                android:id="@+id/imageLayer"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/layer_article" android:foreground="@drawable/image_border"
+                android:scaleType="centerCrop" tools:srcCompat="@drawable/logo"/>
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/imageTop"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/image_top" android:foreground="@drawable/image_border"
+                android:scaleType="centerCrop" tools:srcCompat="@drawable/logo"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <ImageView
+                android:id="@+id/imageBottom"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/image_bottoms" android:foreground="@drawable/image_border"
+                android:scaleType="centerCrop" tools:srcCompat="@drawable/logo"/>
+
+            <Space
+                android:layout_width="35dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/imageShoes"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/image_shoes" android:foreground="@drawable/image_border"
+                android:scaleType="centerCrop" tools:srcCompat="@drawable/logo"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/outfit_share_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" android:clickable="true"
+                android:contentDescription="@string/share_button" android:src="@drawable/share"
+                android:visibility="invisible"
+                app:fabSize="mini"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/outfit_save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" android:clickable="true"
+                android:contentDescription="@string/save_button" android:src="@drawable/heart"
+                android:visibility="invisible"
+                app:fabSize="mini"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/outfit_redo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" android:clickable="true"
+                android:contentDescription="@string/reload_button" android:src="@drawable/reload"
+                android:visibility="invisible"
+                app:fabSize="mini"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/outfit_more_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" android:clickable="true"
+                android:contentDescription="@string/more_button" android:src="@drawable/menu"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutWeather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp" android:layout_marginEnd="15dp"
+            android:orientation="horizontal" android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp" android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="@string/location" android:src="@drawable/placeholder"
+                android:tint="?attr/colorOnBackground"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+                android:layout_weight="1" android:text="@string/location"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground"/>
+            <ImageView
+                android:id="@+id/imageViewWeather"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" android:layout_weight="1"
+                android:contentDescription="@string/weather" android:src="@drawable/weather"
+            />
+            <TextView
+                android:id="@+id/textViewTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center" android:layout_weight="1"
+                android:text="@string/temperature" android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground"/>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="20dp"
+                android:layout_height="20dp" android:layout_gravity="center" android:layout_marginStart="5dp"
+                android:contentDescription="@string/temperature" android:src="@drawable/thermometer"
+                android:tint="?attr/colorOnBackground"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </FrameLayout>

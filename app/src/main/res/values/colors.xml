@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mauve">#66005c</color>
+
+    <color name="mauveLight">#973a89</color>
+
+    <color name="mauveDark">#380032</color>
+
+    <color name="pink">#ff99f5</color>
+
+    <color name="pinkLight">#ffcbff</color>
+
+    <color name="pinkDark">#ca68c2</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="black">#000000</color>
+
+    <color name="greyDark">#1A1A1B</color>
+
+    <color name="greyLight">#F2F2F2</color>
+
+    <color name="red">#B00020</color>
+</resources>

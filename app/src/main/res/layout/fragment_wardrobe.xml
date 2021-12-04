@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/frame_wardrobe"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" android:visibility="invisible" tools:context=".fragment.Wardrobe">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewEmpty"
+            android:layout_width="250dp" android:layout_height="250dp"
+            android:layout_marginBottom="150dp"
+            android:contentDescription="@string/empty"
+            android:tint="?attr/colorOnBackground"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/box"/>
+        <TextView
+            android:id="@+id/textViewEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="@string/empty"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="?attr/colorOnBackground"
+            android:visibility="gone" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/textViewEmpty3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EmptyWardrobe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/material_on_surface_emphasis_medium"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textViewEmpty"/>
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <Spinner
+                android:id="@+id/article_list_type"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorAccent" android:dropDownWidth="150dp"
+                android:entries="@array/article_types_filter" android:popupBackground="?attr/colorSurface"
+                android:theme="@style/mySpinnerItemStyle"/>
+            <Spinner
+                android:id="@+id/article_list_warmth"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorAccent" android:dropDownWidth="150dp"
+                android:entries="@array/article_warmths_filter" android:popupBackground="?attr/colorSurface"
+                android:theme="@style/mySpinnerItemStyle"/>
+            <Spinner
+                android:id="@+id/article_list_availability"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorAccent"
+                android:dropDownWidth="150dp" android:entries="@array/article_availability_filter"
+                android:popupBackground="?attr/colorSurface" android:theme="@style/mySpinnerItemStyle"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/article_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="60dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout4"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_article_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true" android:contentDescription="@string/add" android:src="@drawable/camera"
+            app:fabSize="normal" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:maxImageSize="32dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>
