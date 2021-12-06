@@ -35,10 +35,6 @@
     <string name="weather">Météo actuelle</string>
     <string name="location">Localisation</string>
     <string name="temperature">Température</string>
-    <string name="loading">Chargement</string>
-    <string name="values">Valeurs</string>
-    <string name="use_weather">Choisir l\'isolation à partir de la météo</string>
-    <string name="use_metric">Utiliser le systéme métrique</string>
     <string name="min_temp">Choisir la température minimum pour l\'isolation légére</string>
     <string name="min_temp_summary">Choisissez la température minimale pour les vêtements légers à l\'aide du système
         d\'unités que vous avez choisi
@@ -83,4 +79,6 @@
     <string name="GrantCamera">Donner l\'accés à la caméra</string>
     <string name="GrantLocation">Donner l\'accés à la localisation</string>
     <string name="NeedsPermissions">Merci de donner les accés nécessaire afin de continuer.</string>
+    <string name="tryDiff">Essayez différents filtres !</string>
+    <string name="useMetric">Utiliser le système métrique</string>
 </resources>

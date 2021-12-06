@@ -25,7 +25,7 @@ class MoreDialog : DialogFragment()  {
         }
         val more = layout.findViewById<Button>(R.id.buttonMoreFromMe)
         more.setOnClickListener{
-            val webpage: Uri = Uri.parse("http://mn10games.github.io")
+            val webpage: Uri = Uri.parse("https://mn10games.github.io")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             requireActivity().startActivity(intent)
             dialog?.cancel()

@@ -2,21 +2,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
 >
 
-        <SwitchPreference
-            android:summary="@string/UseLocation"
-            app:defaultValue="true"
-            app:key="weather_warmth" app:title="@string/use_weather" app:useSimpleSummaryProvider="true"/>
+    <SwitchPreference
+        android:summary="@string/UseLocation"
+        app:defaultValue="true"
+        app:key="weather_warmth" app:useSimpleSummaryProvider="true"/>
 
-        <SwitchPreference
-            app:defaultValue="true"
-            app:key="weather_unit"
-            app:title="@string/use_metric" app:useSimpleSummaryProvider="true"/>
+    <SwitchPreference
+        android:title="@string/useMetric"
+        app:defaultValue="true"
+        app:key="weather_unit" app:useSimpleSummaryProvider="true"/>
 
-        <EditTextPreference
-            android:key="min_temp"
-            android:selectAllOnFocus="true" android:singleLine="true"
-            android:summary="@string/min_temp_summary"
-            android:title="@string/min_temp"
-            android:defaultValue="20"/>
+    <EditTextPreference
+        android:defaultValue="20"
+        android:key="min_temp" android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/min_temp_summary"
+        android:title="@string/min_temp"/>
 
 </PreferenceScreen>

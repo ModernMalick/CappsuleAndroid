@@ -5,19 +5,17 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.preference.PreferenceManager
-import com.example.cappsule.onboardingPackage.Onboarding
 import com.example.cappsule.dialog.MoreDialog
 import com.example.cappsule.fragment.Home
 import com.example.cappsule.fragment.Outfits
 import com.example.cappsule.fragment.Settings
 import com.example.cappsule.fragment.Wardrobe
+import com.example.cappsule.onboardingPackage.Onboarding
 import com.google.android.material.navigation.NavigationBarView
 import java.util.*
 
@@ -105,7 +103,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "NOTIFCHANNEL"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel("dailyNotifier", name, importance).apply {
@@ -114,7 +111,6 @@ class MainActivity : AppCompatActivity() {
             val notificationManager: NotificationManager =
                 getSystemService(NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
-        }
     }
 
     private fun onBoardingFinished(): Boolean{

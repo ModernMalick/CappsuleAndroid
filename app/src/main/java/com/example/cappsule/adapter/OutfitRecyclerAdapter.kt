@@ -1,17 +1,16 @@
 package com.example.cappsule.adapter
 
 import android.app.Activity
-import com.example.cappsule.objects.Outfit
-import com.example.cappsule.database.DatabaseHelperOutfit
-import androidx.recyclerview.widget.RecyclerView
-import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
-import com.example.cappsule.R
 import android.widget.TextView
-import java.util.ArrayList
+import androidx.recyclerview.widget.RecyclerView
+import com.example.cappsule.R
+import com.example.cappsule.database.DatabaseHelperOutfit
+import com.example.cappsule.objects.Outfit
 
 class OutfitRecyclerAdapter(private val context: Activity, private val outfits: ArrayList<Outfit>, private val databaseHelperOutfit: DatabaseHelperOutfit, private val onClickListener: OnClickListener) : RecyclerView.Adapter<OutfitRecyclerAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

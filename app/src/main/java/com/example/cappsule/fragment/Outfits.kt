@@ -12,7 +12,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.cappsule.R
 import com.example.cappsule.adapter.OutfitRecyclerAdapter
 import com.example.cappsule.database.DatabaseHelperOutfit

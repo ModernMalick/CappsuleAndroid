@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.cappsule.R
 import com.example.cappsule.adapter.ArticleRecyclerAdapter
 import com.example.cappsule.adapter.ArticleRecyclerAdapter.OnClickArticleListener
@@ -28,8 +29,6 @@ import com.example.cappsule.objects.Article
 import com.example.cappsule.toaster
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.*
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 
 
 class Wardrobe : Fragment(), OnClickArticleListener {
@@ -87,12 +86,10 @@ class Wardrobe : Fragment(), OnClickArticleListener {
         setItemSelected(spinnerAvailability, "Any availability")
 
         val pullToRefresh: SwipeRefreshLayout = view.findViewById(R.id.swiperefresh)
-        pullToRefresh.setOnRefreshListener(object : OnRefreshListener{
-            override fun onRefresh(){
-                populateDataSet() // your code
-                pullToRefresh.isRefreshing = false
-            }
-        })
+        pullToRefresh.setOnRefreshListener {
+            populateDataSet() // your code
+            pullToRefresh.isRefreshing = false
+        }
 
         return view
     }
@@ -134,6 +131,11 @@ class Wardrobe : Fragment(), OnClickArticleListener {
             imageViewEmpty.visibility = View.VISIBLE
             textViewEmpty.visibility = View.VISIBLE
             textViewEmpty2.visibility = View.VISIBLE
+            if(stringType != resources.getString(R.string.article_type) || stringWarmth != resources.getString(R.string.article_warmth) || stringAvailability != resources.getString(R.string.Availability)){
+                textViewEmpty2.text = getString(R.string.tryDiff)
+            } else {
+                textViewEmpty2.text = getString(R.string.EmptyWardrobe)
+            }
         } else {
             imageViewEmpty.visibility = View.GONE
             textViewEmpty.visibility = View.GONE

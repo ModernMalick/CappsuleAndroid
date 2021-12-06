@@ -35,10 +35,6 @@
     <string name="weather">Current weather :</string>
     <string name="location">Location</string>
     <string name="temperature">Temperature</string>
-    <string name="loading">Loading</string>
-    <string name="values">Values</string>
-    <string name="use_weather">Set warmth from weather</string>
-    <string name="use_metric">Use metric system</string>
     <string name="min_temp">Set minimum light warmth temperature</string>
     <string name="min_temp_summary">Set the minimum temperature for light warmth clothes using your chosen unit system
     </string>
@@ -89,4 +85,6 @@
     <string name="GrantCamera">Grant camera access</string>
     <string name="GrantLocation">Grant location access</string>
     <string name="NeedsPermissions">Please grant the required permissions</string>
+    <string name="tryDiff">Try different filters !</string>
+    <string name="useMetric">Use the metric system</string>
 </resources>

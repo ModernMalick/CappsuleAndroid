@@ -1,7 +1,6 @@
 package com.example.cappsule.objects
 
 import android.graphics.Bitmap
-import java.util.Comparator
 
 class Outfit(val name: String, val layer: Bitmap, val top: Bitmap, val bottom: Bitmap, val shoes: Bitmap, val id: Int) {
 

@@ -1,13 +1,9 @@
 package com.example.cappsule
 
-import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.widget.Toast
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import java.io.ByteArrayOutputStream
 
 fun getBytes(bitmap: Bitmap?): ByteArray {

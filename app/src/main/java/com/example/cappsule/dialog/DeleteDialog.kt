@@ -2,14 +2,14 @@ package com.example.cappsule.dialog
 
 import android.app.Dialog
 import android.content.Context
-import com.example.cappsule.fragment.Wardrobe
-import com.example.cappsule.fragment.Outfits
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.cappsule.R
+import com.example.cappsule.fragment.Outfits
+import com.example.cappsule.fragment.Wardrobe
 
 class DeleteDialog : DialogFragment() {
     @JvmField

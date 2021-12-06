@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/box.png" />
+        <ignore path="src/main/res/drawable/cancel.png" />
+        <ignore path="src/main/res/drawable/close.png" />
+        <ignore path="src/main/res/drawable/cloudy.png" />
+        <ignore path="src/main/res/drawable/explanation.png" />
+        <ignore path="src/main/res/drawable/home.png" />
+        <ignore path="src/main/res/drawable/menu.png" />
+        <ignore path="src/main/res/drawable/more.png" />
+        <ignore path="src/main/res/drawable/placeholder.png" />
+        <ignore path="src/main/res/drawable/preferences.png" />
+        <ignore path="src/main/res/drawable/rain.png" />
+        <ignore path="src/main/res/drawable/snow.png" />
+        <ignore path="src/main/res/drawable/start.png" />
+        <ignore path="src/main/res/drawable/sun.png" />
+        <ignore path="src/main/res/drawable/thermometer.png" />
+        <ignore path="src/main/res/drawable/weather.png" />
+        <ignore path="src/main/res/drawable/welcome.png" />
+    </issue>
+</lint>

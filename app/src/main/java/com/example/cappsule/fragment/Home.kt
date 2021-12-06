@@ -1,10 +1,8 @@
 package com.example.cappsule.fragment
 
-import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.pm.PackageManager
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -23,7 +21,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
@@ -33,7 +30,6 @@ import com.example.cappsule.database.DatabaseHelperArticle
 import com.example.cappsule.dialog.OutfitSaveDialog
 import com.example.cappsule.getData
 import com.example.cappsule.getImage
-import com.example.cappsule.toaster
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -148,13 +144,11 @@ class Home : Fragment() {
         }
 
         val pullToRefresh: SwipeRefreshLayout = view.findViewById(R.id.swiperefresh)
-        pullToRefresh.setOnRefreshListener(object : SwipeRefreshLayout.OnRefreshListener {
-            override fun onRefresh(){
-                setViews()
-                setWeather()
-                pullToRefresh.isRefreshing = false
-            }
-        })
+        pullToRefresh.setOnRefreshListener {
+            setViews()
+            setWeather()
+            pullToRefresh.isRefreshing = false
+        }
 
         return view
     }
@@ -174,7 +168,7 @@ class Home : Fragment() {
     }
 
     private fun setViews() {
-        var warmthFR: String = ""
+        var warmthFR = ""
         when (warmth) {
             "Light" -> {warmthFR = "Léger"}
             "Heavy" -> {warmthFR = "Lourd"}
