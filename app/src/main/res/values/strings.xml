@@ -87,4 +87,5 @@
     <string name="NeedsPermissions">Please grant the required permissions</string>
     <string name="tryDiff">Try different filters !</string>
     <string name="useMetric">Use the metric system</string>
+    <string name="UseWeatherS">Use weather for suggestions</string>
 </resources>

@@ -4,8 +4,8 @@
 
     <SwitchPreference
         android:summary="@string/UseLocation"
-        app:defaultValue="true"
-        app:key="weather_warmth" app:useSimpleSummaryProvider="true"/>
+        android:title="@string/UseWeatherS"
+        app:defaultValue="true" app:key="weather_warmth" app:useSimpleSummaryProvider="true"/>
 
     <SwitchPreference
         android:title="@string/useMetric"
