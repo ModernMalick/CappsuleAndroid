@@ -74,6 +74,7 @@ class Home : Fragment() {
     private lateinit var progressBar: ProgressBar
     private lateinit var frameHome: FrameLayout
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
@@ -92,7 +93,16 @@ class Home : Fragment() {
         share = view.findViewById(R.id.outfit_share_button)
 
         more.setOnClickListener { moreClick() }
-        reload.setOnClickListener { setViews() }
+        reload.setOnClickListener {
+            GlobalScope.launch(Dispatchers.Main) {
+                frameHome.visibility = View.INVISIBLE
+                progressBar.visibility = View.VISIBLE
+                setViews()
+                delay(500)
+                progressBar.visibility = View.GONE
+                frameHome.visibility = View.VISIBLE
+            }
+        }
         save.setOnClickListener { openSave() }
         share.setOnClickListener{ share() }
 

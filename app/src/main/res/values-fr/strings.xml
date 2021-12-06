@@ -81,4 +81,5 @@
     <string name="NeedsPermissions">Merci de donner les accés nécessaire afin de continuer.</string>
     <string name="tryDiff">Essayez différents filtres !</string>
     <string name="useMetric">Utiliser le système métrique</string>
+    <string name="UseWeatherS">Utiliser la météo pour les suggestions</string>
 </resources>
