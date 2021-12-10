@@ -20,16 +20,20 @@
             android:background="@android:color/transparent" android:contentDescription="@string/close"
             android:scaleType="centerCrop"
             android:tint="@color/mauve" app:srcCompat="@drawable/cancel"/>
-        <Button
+        <TextView
+            android:id="@+id/textViewRate"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="center"
-            android:backgroundTint="@color/mauveLight" android:text="@string/rate"
-            android:textColor="@color/white"/>
-        <Button
-            android:id="@+id/buttonMoreFromMe"
+            android:layout_height="wrap_content" android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:text="@string/rate" android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/colorOnSurface"/>
+        <TextView
+            android:id="@+id/textViewMore"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_gravity="center"
-            android:layout_margin="5dp" android:backgroundTint="@color/mauveLight"
-            android:text="@string/more_from_me" android:textColor="@color/white"/>
+            android:layout_height="wrap_content" android:layout_gravity="start"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
+            android:text="@string/more_from_me" android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/colorOnSurface"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

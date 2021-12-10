@@ -56,14 +56,16 @@
                     android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="?attr/colorAccent" android:dropDownWidth="150dp"
-                    android:entries="@array/article_types_filter" android:popupBackground="?attr/colorSurface"
+                    android:entries="@array/article_types_filter"
+                    android:popupBackground="@color/pinkDark"
                     android:theme="@style/mySpinnerItemStyle"/>
                 <Spinner
                     android:id="@+id/article_list_warmth"
                     android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:backgroundTint="?attr/colorAccent" android:dropDownWidth="150dp"
-                    android:entries="@array/article_warmths_filter" android:popupBackground="?attr/colorSurface"
+                    android:entries="@array/article_warmths_filter"
+                    android:popupBackground="@color/pinkDark"
                     android:theme="@style/mySpinnerItemStyle"/>
                 <Spinner
                     android:id="@+id/article_list_availability"
@@ -71,7 +73,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="?attr/colorAccent"
                     android:dropDownWidth="150dp" android:entries="@array/article_availability_filter"
-                    android:popupBackground="?attr/colorSurface" android:theme="@style/mySpinnerItemStyle"/>
+                    android:popupBackground="@color/pinkDark" android:theme="@style/mySpinnerItemStyle"/>
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/article_list"

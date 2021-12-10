@@ -40,8 +40,8 @@
     </string>
     <string name="more_menu">See more options</string>
     <string name="close">Close the dialog</string>
-    <string name="rate">Rate Cappsule</string>
-    <string name="more_from_me">More from the author</string>
+    <string name="rate">- Rate Cappsule</string>
+    <string name="more_from_me">- More from the author</string>
     <string name="UseLocation">Use your location and the internet to set the right warmth</string>
     <string name="EmptyWardrobe">Add articles with your camera !</string>
     <string name="EmptyOutfits">Add outfits from the Home screen !</string>

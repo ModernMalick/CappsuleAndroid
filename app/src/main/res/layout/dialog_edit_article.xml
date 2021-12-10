@@ -58,7 +58,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:backgroundTint="?attr/colorAccent" android:entries="@array/article_types"/>
+                    android:backgroundTint="?attr/colorAccent" android:entries="@array/article_types"
+                    android:popupBackground="@color/pinkDark"/>
             </TableRow>
 
             <TableRow
@@ -79,7 +80,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:backgroundTint="?attr/colorAccent" android:entries="@array/article_warmths"/>
+                    android:backgroundTint="?attr/colorAccent" android:entries="@array/article_warmths"
+                    android:popupBackground="@color/pinkDark"/>
             </TableRow>
 
         </TableLayout>

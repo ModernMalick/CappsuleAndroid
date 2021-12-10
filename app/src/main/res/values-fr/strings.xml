@@ -41,8 +41,8 @@
     </string>
     <string name="more_menu">Menu plus</string>
     <string name="close">Fermer la boîte de dialogue</string>
-    <string name="rate">Noter Cappsule</string>
-    <string name="more_from_me">Plus de cet auteur</string>
+    <string name="rate">- Noter Cappsule</string>
+    <string name="more_from_me">- Plus de cet auteur</string>
     <string name="type_not_set">Type non défini</string>
     <string name="Layer">Surcouche</string>
     <string name="Top">Haut</string>

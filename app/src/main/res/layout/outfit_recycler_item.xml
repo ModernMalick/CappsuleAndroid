@@ -55,15 +55,15 @@
                 android:id="@+id/outfit_item_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
                 android:text="@string/name"
                 android:textAlignment="textStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="?attr/colorOnBackground" tools:ignore="RtlCompat"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textColor="?attr/colorOnBackground" tools:ignore="RtlCompat"/>
             <Button
                 android:id="@+id/delete_outfit"
                 android:layout_width="30dp" android:layout_height="30dp"
-                android:layout_gravity="center" android:backgroundTint="@color/mauve" android:insetRight="0dp"
+                android:layout_gravity="bottom" android:backgroundTint="@color/mauve" android:insetRight="0dp"
                 android:insetBottom="0dp"
                 android:text="@string/delete_button" app:icon="@drawable/delete" app:iconGravity="textStart"
                 app:iconPadding="0dp" app:iconSize="15dp"/>

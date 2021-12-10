@@ -8,9 +8,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.cappsule.R
+import com.example.cappsule.toaster
 
 
 class MoreDialog : DialogFragment()  {
@@ -23,11 +25,16 @@ class MoreDialog : DialogFragment()  {
         cancel.setOnClickListener {
             dialog?.cancel()
         }
-        val more = layout.findViewById<Button>(R.id.buttonMoreFromMe)
+        val more = layout.findViewById<TextView>(R.id.textViewMore)
         more.setOnClickListener{
             val webpage: Uri = Uri.parse("https://mn10games.github.io")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             requireActivity().startActivity(intent)
+            dialog?.cancel()
+        }
+        val rate = layout.findViewById<TextView>(R.id.textViewRate)
+        rate.setOnClickListener{
+            toaster(requireContext(), "RATED")
             dialog?.cancel()
         }
 
