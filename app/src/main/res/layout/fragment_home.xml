@@ -124,7 +124,7 @@
                     android:layout_gravity="center_horizontal" android:clickable="true"
                     android:contentDescription="@string/share_button" android:src="@drawable/share"
                     android:visibility="invisible"
-                    app:fabSize="mini"/>
+                    app:elevation="0dp" app:fabSize="mini"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/outfit_save_button"
                     android:layout_width="wrap_content"
@@ -132,7 +132,7 @@
                     android:layout_gravity="center_horizontal" android:clickable="true"
                     android:contentDescription="@string/save_button" android:src="@drawable/heart"
                     android:visibility="invisible"
-                    app:fabSize="mini"/>
+                    app:elevation="0dp" app:fabSize="mini"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/outfit_redo_button"
                     android:layout_width="wrap_content"
@@ -140,14 +140,14 @@
                     android:layout_gravity="center_horizontal" android:clickable="true"
                     android:contentDescription="@string/reload_button" android:src="@drawable/reload"
                     android:visibility="invisible"
-                    app:fabSize="mini"/>
+                    app:elevation="0dp" app:fabSize="mini"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/outfit_more_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal" android:layout_marginTop="5dp"
                     android:layout_marginBottom="15dp" android:clickable="true"
-                    android:contentDescription="@string/more_button" android:src="@drawable/menu"/>
+                    android:contentDescription="@string/more_button" android:src="@drawable/menu" app:elevation="0dp"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linearLayoutWeather"
