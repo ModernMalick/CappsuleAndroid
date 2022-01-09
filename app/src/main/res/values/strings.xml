@@ -35,7 +35,7 @@
     <string name="weather">Current weather :</string>
     <string name="location">Location</string>
     <string name="temperature">Temperature</string>
-    <string name="min_temp">Set minimum light warmth temperature</string>
+    <string name="min_temp">Minimum light warmth temperature</string>
     <string name="min_temp_summary">Set the minimum temperature for light warmth clothes using your chosen unit system
     </string>
     <string name="more_menu">See more options</string>
@@ -79,8 +79,12 @@
     <string name="Start">Cappsule will then suggest outfits based on your needs !</string>
     <string name="Next">Next</string>
     <string name="StartButton">Start</string>
-    <string name="NeedPermissionCamera">Cappsule requires access to your camera so you can add your own clothing articles.</string>
-    <string name="NeedPermissionLocation">Cappsule also requires access to your general position to suggest weather relevant outfits.</string>
+    <string name="NeedPermissionCamera">Cappsule requires access to your camera so you can add your own clothing
+        articles.
+    </string>
+    <string name="NeedPermissionLocation">Cappsule also requires access to your general position to suggest weather
+        relevant outfits.
+    </string>
     <string name="Proceed">Proceed</string>
     <string name="GrantCamera">Grant camera access</string>
     <string name="GrantLocation">Grant location access</string>
@@ -88,4 +92,12 @@
     <string name="tryDiff">Try different filters !</string>
     <string name="useMetric">Use the metric system</string>
     <string name="UseWeatherS">Use weather for suggestions</string>
+    <string name="credits">- Illustrations by storyset</string>
+    <string name="CreditsIcons">- Icons by flaticon</string>
+    <string name="useMetricExp">Use the metric system to display the current weather\'s temperature</string>
+    <string name="RateExp">Help Cappsule by sharing your experience</string>
+    <string name="moreExp">Visit my website for more of my creations</string>
+    <string name="creditsExp">Visit storyset to see more illustrations like the ones used on Cappsule</string>
+    <string name="creditsIconsExp">All the Icons used on Cappsule come from this website</string>
+    <string name="minTempValue">15</string>
 </resources>

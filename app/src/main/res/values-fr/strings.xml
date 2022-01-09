@@ -82,4 +82,12 @@
     <string name="tryDiff">Essayez différents filtres !</string>
     <string name="useMetric">Utiliser le système métrique</string>
     <string name="UseWeatherS">Utiliser la météo pour les suggestions</string>
+    <string name="credits">- Illustrations par storyset</string>
+    <string name="CreditsIcons">- Icônes par flaticon</string>
+    <string name="useMetricExp">Utilisez le système métrique pour afficher la température météo actuelle</string>
+    <string name="RateExp">Aidez Cappsule en partageant votre expérience</string>
+    <string name="moreExp">Visitez mon site Web pour plus de mes créations</string>
+    <string name="creditsExp">Visitez storyset pour voir plus d\'illustrations comme celles utilisées sur Cappsule</string>
+    <string name="creditsIconsExp">Toutes les Icônes utilisées sur Cappsule proviennent de ce site</string>
+    <string name="minTempValue">15</string>
 </resources>

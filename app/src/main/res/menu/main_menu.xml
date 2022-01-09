@@ -3,21 +3,16 @@
     <item
         android:id="@+id/menu_home"
         android:checkable="true"
-        android:icon="@drawable/home"
+        android:icon="@drawable/home_resource"
         android:title="@string/home"/>
     <item
         android:id="@+id/wardrobe"
         android:checkable="true"
-        android:icon="@drawable/wardrobe"
+        android:icon="@drawable/wardrobe_resource"
         android:title="@string/wardrobe"/>
-    <item
-        android:id="@+id/menu_outfit"
-        android:checkable="true"
-        android:icon="@drawable/clothes"
-        android:title="@string/outfit"/>
     <item
         android:id="@+id/menu_settings"
         android:checkable="true"
-        android:icon="@drawable/settings"
+        android:icon="@drawable/settings_resource"
         android:title="@string/settings"/>
 </menu>

@@ -1,12 +1,10 @@
 package com.example.cappsule.fragment
 
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.Canvas
 import android.graphics.Typeface
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -15,19 +13,16 @@ import android.location.Geocoder
 import android.location.Location
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.cappsule.R
 import com.example.cappsule.database.DatabaseHelperArticle
-import com.example.cappsule.dialog.OutfitSaveDialog
 import com.example.cappsule.getData
 import com.example.cappsule.getImage
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -35,9 +30,6 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.*
 import org.json.JSONObject
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
 import java.util.*
 
 
@@ -87,12 +79,8 @@ class Home : Fragment() {
         val databaseHelperArticle = DatabaseHelperArticle(context)
         db = databaseHelperArticle.writableDatabase
 
-        more = view.findViewById(R.id.outfit_more_button)
         reload = view.findViewById(R.id.outfit_redo_button)
-        save = view.findViewById(R.id.outfit_save_button)
-        share = view.findViewById(R.id.outfit_share_button)
 
-        more.setOnClickListener { moreClick() }
         reload.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
                 frameHome.visibility = View.INVISIBLE
@@ -103,8 +91,6 @@ class Home : Fragment() {
                 frameHome.visibility = View.VISIBLE
             }
         }
-        save.setOnClickListener { openSave() }
-        share.setOnClickListener{ share() }
 
         textViewCity = view.findViewById(R.id.location)
         textViewTemperature = view.findViewById(R.id.textViewTemperature)
@@ -114,7 +100,6 @@ class Home : Fragment() {
         switchWarmth = view.findViewById(R.id.outfit_warmth_switch)
         prefDefaultWarmth = this.context!!.getSharedPreferences("pref", Context.MODE_PRIVATE)
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-        prefWeatherWarmthStatus = sharedPreferences.getBoolean("weather_warmth", true)
         prefWeatherUnitMetricStatus = sharedPreferences.getBoolean("weather_unit", true)
         prefWeatherMinLightTemp = sharedPreferences.getString("min_temp", "0")?.toInt() ?: 0
 
@@ -230,65 +215,6 @@ class Home : Fragment() {
             }
         }
         cursor.close()
-    }
-
-    private fun moreClick() {
-        if (littleButtonVisible) {
-            littleButtonVisible = false
-            reload.visibility = FloatingActionButton.INVISIBLE
-            save.visibility = FloatingActionButton.INVISIBLE
-            share.visibility = FloatingActionButton.INVISIBLE
-            more.setImageResource(R.drawable.menu)
-        } else {
-            littleButtonVisible = true
-            reload.visibility = FloatingActionButton.VISIBLE
-            save.visibility = FloatingActionButton.VISIBLE
-            share.visibility = FloatingActionButton.VISIBLE
-            more.setImageResource(R.drawable.close)
-        }
-    }
-
-    private fun openSave() {
-        moreClick()
-        val outfitSaveDialog = OutfitSaveDialog()
-        outfitSaveDialog.layer = layer
-        outfitSaveDialog.top = top
-        outfitSaveDialog.bottom = bottom
-        outfitSaveDialog.shoes = shoes
-        outfitSaveDialog.home = this
-        outfitSaveDialog.show(childFragmentManager, "OUTFITSAVEDIALOG")
-    }
-
-    private fun share() {
-        moreClick()
-        try {
-            val cachePath = File(context!!.cacheDir, "images")
-            cachePath.mkdirs()
-            val stream = FileOutputStream("$cachePath/image.png")
-            getBitmapFromView(requireView().rootView)?.compress(Bitmap.CompressFormat.PNG, 100, stream)
-            stream.close()
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        val imagePath = File(context!!.cacheDir, "images")
-        val newFile = File(imagePath, "image.png")
-        val contentUri: Uri? = FileProvider.getUriForFile(context!!, "com.example.cappsule.fileprovider", newFile)
-        if (contentUri != null) {
-            val shareIntent = Intent()
-            shareIntent.action = Intent.ACTION_SEND
-            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            shareIntent.setDataAndType(contentUri, requireContext().contentResolver.getType(contentUri))
-            shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri)
-            shareIntent.putExtra(Intent.EXTRA_TEXT, resources.getString(R.string.SentByCappsule))
-            startActivity(Intent.createChooser(shareIntent, "Choose an app"))
-        }
-    }
-
-    private fun getBitmapFromView(view: View): Bitmap? {
-        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        view.draw(canvas)
-        return bitmap
     }
 
     private fun isNetworkAvailable(): Boolean

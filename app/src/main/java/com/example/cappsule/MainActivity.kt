@@ -1,8 +1,4 @@
 package com.example.cappsule
-import android.app.AlarmManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -10,14 +6,11 @@ import android.view.MenuItem
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.cappsule.dialog.MoreDialog
 import com.example.cappsule.fragment.Home
-import com.example.cappsule.fragment.Outfits
 import com.example.cappsule.fragment.Settings
 import com.example.cappsule.fragment.Wardrobe
 import com.example.cappsule.onboardingPackage.Onboarding
 import com.google.android.material.navigation.NavigationBarView
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,11 +32,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { item: MenuItem -> onNavigationItemSelected(item) }
         bottomNavigationView.menu.getItem(0).isChecked = true
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view, selectedFragment).commit()
-        moreButton = findViewById(R.id.moreButton)
-        moreButton.setOnClickListener{
-            val moreDialog = MoreDialog()
-            moreDialog.show(supportFragmentManager, "MOREDIALOG")
-        }
     }
 
     private fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -60,14 +48,6 @@ class MainActivity : AppCompatActivity() {
                 if(currentFragmentName != "Wardrobe"){
                     selectedFragment = Wardrobe()
                     currentFragmentName = "Wardrobe"
-                } else {
-                    toaster(this, resources.getString(R.string.AlreadyOnPage))
-                }
-            }
-            R.id.menu_outfit -> {
-                if(currentFragmentName != "Outfits"){
-                    selectedFragment = Outfits()
-                    currentFragmentName = "Outfits"
                 } else {
                     toaster(this, resources.getString(R.string.AlreadyOnPage))
                 }

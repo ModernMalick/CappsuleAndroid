@@ -8,7 +8,6 @@ import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.cappsule.R
-import com.example.cappsule.fragment.Outfits
 import com.example.cappsule.fragment.Wardrobe
 
 class DeleteDialog : DialogFragment() {
@@ -16,8 +15,6 @@ class DeleteDialog : DialogFragment() {
     var position = 0
     @JvmField
     var wardrobe: Wardrobe? = null
-    @JvmField
-    var outfits: Outfits? = null
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(requireContext())
         val layoutInflater = requireActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -33,8 +30,6 @@ class DeleteDialog : DialogFragment() {
     private fun onClick() {
         if (wardrobe != null) {
             wardrobe!!.actualDeletion(position)
-        } else {
-            outfits!!.actualDeletion(position)
         }
         dialog?.cancel()
     }
