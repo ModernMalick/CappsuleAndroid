@@ -25,6 +25,15 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textColor="?attr/colorOnBackground"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginStart="36dp"
+            android:text="@string/page_1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?attr/colorOnBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/next" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/next"/>
         <Button
             android:id="@+id/next"
             android:layout_width="wrap_content"

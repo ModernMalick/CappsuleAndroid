@@ -76,4 +76,8 @@
     <string name="creditsExp">Visit storyset to see more illustrations like the ones used on Cappsule</string>
     <string name="creditsIconsExp">All the Icons used on Cappsule come from this website</string>
     <string name="minTempValue">15</string>
+    <string name="page_1">1/4</string>
+    <string name="page_2">2/4</string>
+    <string name="page_3">3/4</string>
+    <string name="page_4">4/4</string>
 </resources>

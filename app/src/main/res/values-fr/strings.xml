@@ -65,4 +65,8 @@
     <string name="creditsExp">Visitez storyset pour voir plus d\'illustrations comme celles utilisées sur Cappsule</string>
     <string name="creditsIconsExp">Toutes les Icônes utilisées sur Cappsule proviennent de ce site</string>
     <string name="minTempValue">15</string>
+    <string name="page_1">1/4</string>
+    <string name="page_2">2/4</string>
+    <string name="page_3">3/4</string>
+    <string name="page_4">4/4</string>
 </resources>
