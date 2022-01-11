@@ -83,12 +83,7 @@ class Home : Fragment() {
 
         reload.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
-                frameHome.visibility = View.INVISIBLE
-                progressBar.visibility = View.VISIBLE
                 setViews()
-                delay(500)
-                progressBar.visibility = View.GONE
-                frameHome.visibility = View.VISIBLE
             }
         }
 
