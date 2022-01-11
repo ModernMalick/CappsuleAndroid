@@ -32,7 +32,7 @@ class Settings : Fragment() {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val more = view.findViewById<TextView>(R.id.more)
         more.setOnClickListener{
-            val webpage: Uri = Uri.parse("https://mn10games.github.io")
+            val webpage: Uri = Uri.parse("https://malick-ndiaye.github.io")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             requireActivity().startActivity(intent)
         }
