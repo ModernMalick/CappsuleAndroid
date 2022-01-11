@@ -22,6 +22,7 @@ class Settings : Fragment() {
     private lateinit var sharedPreferences: SharedPreferences
     private var prefWeatherMinLightTemp: Int = 0
     private lateinit var minTempText: EditText
+    private lateinit var unit: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,9 +52,11 @@ class Settings : Fragment() {
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             requireActivity().startActivity(intent)
         }
+        unit = view.findViewById(R.id.settingsUnit)
 
         if(!sharedPreferences.contains("weather_unit")){
             sharedPreferences.edit().putBoolean("weather_unit", true).apply()
+            unit.text = "°C"
         }
 
         if(!sharedPreferences.contains("min_temp")){
@@ -61,6 +64,13 @@ class Settings : Fragment() {
         }
 
         val prefWeatherUnitMetricStatus = sharedPreferences.getBoolean("weather_unit", true)
+
+        if(!prefWeatherUnitMetricStatus){
+            unit.text = "°F"
+        } else {
+            unit.text = "°C"
+        }
+
         prefWeatherMinLightTemp = sharedPreferences.getString("min_temp", "0")?.toInt() ?: 0
 
         val switch = view.findViewById<Switch>(R.id.metricSwitch)
@@ -69,6 +79,11 @@ class Settings : Fragment() {
 
         switch.setOnCheckedChangeListener { _: CompoundButton?, isChecked: Boolean ->
             sharedPreferences.edit().putBoolean("weather_unit", isChecked).apply()
+            if(isChecked){
+                unit.text = "°C"
+            } else {
+                unit.text = "°F"
+            }
         }
 
         minTempText = view.findViewById(R.id.minTemp)

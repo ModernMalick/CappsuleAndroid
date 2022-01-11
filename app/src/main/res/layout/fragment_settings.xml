@@ -6,7 +6,7 @@
              tools:context=".fragment.Settings">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" android:layout_margin="25dp">
+        android:layout_height="match_parent" android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/textView"
@@ -52,8 +52,19 @@
             android:layout_marginBottom="5dp" android:autofillHints="@string/min_temp_summary"
             android:ems="10" android:hint="@string/minTempValue"
             android:inputType="numberSigned" android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/textView6" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView3" app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@+id/settingsUnit" app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+        <TextView
+            android:id="@+id/settingsUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?attr/colorOnBackground" app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/minTemp" app:layout_constraintTop_toBottomOf="@+id/textView2"/>
         <TextView
             android:id="@+id/rate"
             android:layout_width="wrap_content"
