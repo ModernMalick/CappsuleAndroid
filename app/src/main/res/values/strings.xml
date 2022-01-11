@@ -2,7 +2,6 @@
     <string name="app_name">Cappsule</string>
     <string name="slogan">Dressing made easy</string>
     <string name="logo">Cappsule\'s logo, a hanger shaped like a diamond</string>
-    <string name="outfit">Outfits</string>
     <string name="wardrobe">Wardrobe</string>
     <string name="add">Camera button to add an article</string>
     <string name="settings">Settings</string>
@@ -10,27 +9,18 @@
     <string name="is_available">Available</string>
     <string name="article_type" translatable="false">Type</string>
     <string name="article_warmth">Warmth</string>
-    <string name="delete_button">Delete</string>
     <string name="edit_article_title">Modify your article</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="light">Light</string>
     <string name="heavy">Heavy</string>
-    <string name="more_button">More button</string>
     <string name="reload_button">Reload button to get a new outfit proposition</string>
-    <string name="save_button">Button to save this outfit</string>
-    <string name="share_button">Button to share this outfit</string>
     <string name="layer_article">Image of a layer</string>
     <string name="image_top">Image of a top</string>
     <string name="image_bottoms">Image of bottoms (pants etc…)</string>
     <string name="image_shoes">Image of shoes</string>
-    <string name="save_outfit_title">Save this outfit</string>
-    <string name="name">Name</string>
-    <string name="outfit_name">Name your outfit</string>
     <string name="home">Home</string>
-    <string name="rename_outfit">Rename your outfit</string>
     <string name="empty">Wow, such empty</string>
-    <string name="background">background</string>
     <string name="sure">Confirm deletion</string>
     <string name="weather">Current weather :</string>
     <string name="location">Location</string>
@@ -38,13 +28,9 @@
     <string name="min_temp">Minimum light warmth temperature</string>
     <string name="min_temp_summary">Set the minimum temperature for light warmth clothes using your chosen unit system
     </string>
-    <string name="more_menu">See more options</string>
-    <string name="close">Close the dialog</string>
     <string name="rate">- Rate Cappsule</string>
     <string name="more_from_me">- More from the author</string>
-    <string name="UseLocation">Use your location and the internet to set the right warmth</string>
     <string name="EmptyWardrobe">Add articles with your camera !</string>
-    <string name="EmptyOutfits">Add outfits from the Home screen !</string>
 
     <!--Arrays-->
     <string name="type_not_set">Type not set</string>
@@ -59,18 +45,10 @@
     <string name="Unavailable">Unavailable</string>
 
     <!--Notification-->
-    <string name="NotifTitle">It\'s a new day, yes it is !</string>
-    <string name="NotifBody">Let\'s dress you accordingly 😄</string>
 
     <!--Toasts-->
     <string name="AlreadyOnPage">You\'re already on this page</string>
     <string name="ArticleUpdated">Article updated</string>
-    <string name="OutfitNameUpdated">Outfit name updated</string>
-    <string name="EnterName">Enter a name</string>
-    <string name="ArticleSaved">Article saved</string>
-    <string name="SentByCappsule">Sent via Cappsule</string>
-    <string name="OutfitDeleted">Outfit deleted</string>
-    <string name="Empty">Please enter a value</string>
     <string name="ArticleDeleted">Article deleted</string>
 
     <!--Onboarding-->
@@ -85,13 +63,11 @@
     <string name="NeedPermissionLocation">Cappsule also requires access to your general position to suggest weather
         relevant outfits.
     </string>
-    <string name="Proceed">Proceed</string>
     <string name="GrantCamera">Grant camera access</string>
     <string name="GrantLocation">Grant location access</string>
     <string name="NeedsPermissions">Please grant the required permissions</string>
     <string name="tryDiff">Try different filters !</string>
     <string name="useMetric">Use the metric system</string>
-    <string name="UseWeatherS">Use weather for suggestions</string>
     <string name="credits">- Illustrations by storyset</string>
     <string name="CreditsIcons">- Icons by flaticon</string>
     <string name="useMetricExp">Use the metric system to display the current weather\'s temperature</string>

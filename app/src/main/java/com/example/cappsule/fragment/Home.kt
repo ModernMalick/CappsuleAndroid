@@ -45,11 +45,7 @@ class Home : Fragment() {
     private var shoes: Bitmap? = null
     private var db: SQLiteDatabase? = null
     private lateinit var warmth: String
-    private lateinit var more: FloatingActionButton
     private lateinit var reload: FloatingActionButton
-    private lateinit var save: FloatingActionButton
-    private lateinit var share: FloatingActionButton
-    private var littleButtonVisible = false
     private lateinit var textViewCity: TextView
     private lateinit var textViewTemperature: TextView
     private lateinit var imageViewWeather: ImageView

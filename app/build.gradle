@@ -47,8 +47,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     compileOnly 'com.google.android.wearable:wearable:2.8.1'
     implementation "androidx.core:core-ktx:1.7.0"
-    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt')
-    implementation "com.google.android.gms:play-services-location:18.0.0"
+    implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0-native-mt')
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
     implementation 'com.github.jakebonk:NotifyMe:1.0.1'
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 }
