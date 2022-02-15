@@ -29,7 +29,7 @@ class Settings : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context!!)
         val more = view.findViewById<TextView>(R.id.more)
         more.setOnClickListener{
             val webpage: Uri = Uri.parse("https://malick-ndiaye.github.io")
@@ -90,7 +90,7 @@ class Settings : Fragment() {
 
         minTempText.setText(prefWeatherMinLightTemp.toString())
 
-        minTempText.doOnTextChanged { text, start, before, count ->
+        minTempText.doOnTextChanged { _, _, _, _ ->
             sharedPreferences.edit().putString("min_temp", minTempText.text.toString()).apply()
         }
 

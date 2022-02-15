@@ -90,7 +90,7 @@ class Home : Fragment() {
         val textViewHeavy = view.findViewById<TextView>(R.id.textViewHeavy)
         switchWarmth = view.findViewById(R.id.outfit_warmth_switch)
         prefDefaultWarmth = this.context!!.getSharedPreferences("pref", Context.MODE_PRIVATE)
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context!!)
         prefWeatherUnitMetricStatus = sharedPreferences.getBoolean("weather_unit", true)
         prefWeatherMinLightTemp = sharedPreferences.getString("min_temp", "0")?.toInt() ?: 0
 

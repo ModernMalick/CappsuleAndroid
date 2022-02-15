@@ -13,7 +13,7 @@ class Onboarding : AppCompatActivity() {
         setContentView(R.layout.activity_onboarding)
 
         val fragmentList = arrayListOf(
-            Welcome(), Explanation(), Start(), PermissionsFragment()
+            Welcome(), Explanation(), Start(), PermissionsFragment(), Subscription()
         )
 
         val adapter = ViewPagerAdapter(fragmentList, this.supportFragmentManager, lifecycle)
@@ -21,5 +21,6 @@ class Onboarding : AppCompatActivity() {
         viewPager = findViewById(R.id.myViewPager)
 
         viewPager.adapter = adapter
+        viewPager.isUserInputEnabled = false
     }
 }

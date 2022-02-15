@@ -69,4 +69,15 @@
     <string name="page_2">2/4</string>
     <string name="page_3">3/4</string>
     <string name="page_4">4/4</string>
+    <string name="Free_Trial_Text">En guise de cadeau de bienvenue, veuillez profiter de votre premier mois gratuitement !</string>
+    <string name="Accept_Gift">Accepter le cadeau</string>
+    <string name="SubscriptionStatus">Le temps passe vite quand on s\'habille facilement. Votre abonnement est malheureusement épuisé
+    </string>
+    <string name="Renew">Renouveler</string>
+    <string name="Sub_disconnected">Service déconnecté</string>
+    <string name="Error">\"Erreur \"</string>
+    <string name="Sub_unavailable">Service non disponible</string>
+    <string name="Sub_notsupported">Service non pris en charge sur l\'appareil</string>
+    <string name="Sub_please">Veuillez vous abonner afin d\'accéder à Cappsule</string>
+
 </resources>

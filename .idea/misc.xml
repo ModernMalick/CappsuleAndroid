@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/activity_main.xml" value="0.2740740740740741" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/activity_onboarding.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_subscription.xml" value="0.33541666666666664" />
+      </map>
+    </option>
+  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

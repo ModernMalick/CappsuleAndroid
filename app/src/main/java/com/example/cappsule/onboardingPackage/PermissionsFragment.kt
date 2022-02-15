@@ -1,8 +1,6 @@
 package com.example.cappsule.onboardingPackage
 
 import android.Manifest
-import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,9 +10,7 @@ import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.preference.PreferenceManager
 import androidx.viewpager2.widget.ViewPager2
-import com.example.cappsule.MainActivity
 import com.example.cappsule.R
 import com.example.cappsule.toaster
 
@@ -71,21 +67,11 @@ class PermissionsFragment : Fragment() {
                     Manifest.permission.ACCESS_FINE_LOCATION
                 ) != PackageManager.PERMISSION_DENIED)
             ) {
-                onBoardingFinished()
-                startActivity(Intent(requireContext(), MainActivity::class.java))
-                requireActivity().finish()
+                viewPager.currentItem = 4
             } else {
                 toaster(requireContext(), requireContext().getString(R.string.NeedsPermissions))
             }
         }
         return view
-    }
-
-    private fun onBoardingFinished() {
-        val sharedPreferences = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("Finished", true)
-        editor.apply()
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putString("min_temp", "20").apply()
     }
 }

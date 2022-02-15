@@ -80,4 +80,14 @@
     <string name="page_2">2/4</string>
     <string name="page_3">3/4</string>
     <string name="page_4">4/4</string>
+    <string name="Free_Trial_Text">As a welcoming gift, We\'d like you to enjoy your first month for free !</string>
+    <string name="Accept_Gift">Accept gift</string>
+    <string name="SubscriptionStatus">Time flies when dressing easy. Your subscription has unfortunately ran out
+    </string>
+    <string name="Renew">Renew</string>
+    <string name="Sub_disconnected">Service disconnected</string>
+    <string name="Error">\"Error \"</string>
+    <string name="Sub_unavailable">Service not available</string>
+    <string name="Sub_notsupported">Service not supported on device</string>
+    <string name="Sub_please">Please subscribe to access Cappsule</string>
 </resources>
