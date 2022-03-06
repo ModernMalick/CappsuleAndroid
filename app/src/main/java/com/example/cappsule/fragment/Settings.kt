@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.example.cappsule.R
 import com.example.cappsule.toaster
+import com.google.android.play.core.review.ReviewManagerFactory
 
 class Settings : Fragment() {
 
@@ -32,13 +33,25 @@ class Settings : Fragment() {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context!!)
         val more = view.findViewById<TextView>(R.id.more)
         more.setOnClickListener{
-            val webpage: Uri = Uri.parse("https://malick-ndiaye.github.io")
+            val webpage: Uri = Uri.parse("https://modernmalick.com")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             requireActivity().startActivity(intent)
         }
         val rate = view.findViewById<TextView>(R.id.rate)
         rate.setOnClickListener{
-            toaster(requireContext(), "RATED")
+            val manager = ReviewManagerFactory.create(requireContext())
+            val request = manager.requestReviewFlow()
+            request.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val reviewInfo = task.result
+                    val flow = manager.launchReviewFlow(requireActivity(), reviewInfo)
+                    flow.addOnCompleteListener { _ ->
+                    }
+                } else {
+                    // There was some problem, log or handle the error code.
+                    toaster(requireContext(), getString(R.string.Unavailable))
+                }
+            }
         }
         val credits = view.findViewById<TextView>(R.id.ill)
         credits.setOnClickListener{

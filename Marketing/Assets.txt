@@ -1,0 +1,18 @@
+NAME
+Cappsule - Minimalist wardrobe
+
+SUBTITLE
+Outfit suggestion tool
+
+DESCRIPTION 
+Relevant outfit ideas at your fingertips !
+Cappsule is a wardrobe organizer for minimalists and capsule wardrobe enthusiasts.
+It lets you save your clothes and suggests outfits based on conditions which you control such as their availability or the weather.
+Dressing has never been this easy !
+
+KEYWORDS
+Capsule Wardrobe Outfit Ideas Suggestions Weather Fashion Clothes Dressing
+
+PRIVACY POLICY 
+https://www.freeprivacypolicy.com/live/d0a85c38-586c-499a-af24-563c5d97aba6
+

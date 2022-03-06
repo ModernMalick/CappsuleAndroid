@@ -4,8 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/activity_main.xml" value="0.2740740740740741" />
-        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/activity_onboarding.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/activity_onboarding.xml" value="0.44722222222222224" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/article_recycler_item.xml" value="0.44722222222222224" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/dialog_delete_confirmation.xml" value="0.44722222222222224" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_explanation.xml" value="0.44722222222222224" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_home.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_permissions.xml" value="0.22" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_settings.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_start.xml" value="0.5546875" />
         <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_subscription.xml" value="0.33541666666666664" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_wardrobe.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/MN10GAMES/CappsuleAndroid/app/src/main/res/layout/fragment_welcome.xml" value="0.5546875" />
+        <entry key="..\:/Users/malic/Documents/PROJECTS/CappsuleAndroid/app/src/main/res/layout/activity_main.xml" value="0.5546875" />
       </map>
     </option>
   </component>

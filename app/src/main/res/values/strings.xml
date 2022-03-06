@@ -57,11 +57,7 @@
     <string name="Start">Cappsule will then suggest outfits based on your needs !</string>
     <string name="Next">Next</string>
     <string name="StartButton">Start</string>
-    <string name="NeedPermissionCamera">Cappsule requires access to your camera so you can add your own clothing
-        articles.
-    </string>
-    <string name="NeedPermissionLocation">Cappsule also requires access to your general position to suggest weather
-        relevant outfits.
+    <string name="NeedPermission">Please grant the following permissions to access Cappsule\'s functionalities
     </string>
     <string name="GrantCamera">Grant camera access</string>
     <string name="GrantLocation">Grant location access</string>

@@ -24,7 +24,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="50dp" android:gravity="center"
-            android:text="@string/NeedPermissionCamera" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:text="@string/NeedPermission" android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="?attr/colorOnBackground" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView10"/>
@@ -35,27 +35,14 @@
             android:layout_marginTop="10dp" android:backgroundTint="@color/mauve"
             android:text="@string/GrantCamera" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="50dp"
-            android:gravity="center"
-            android:text="@string/NeedPermissionLocation"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="?attr/colorOnBackground" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonGrantCamera"/>
         <Button
             android:id="@+id/buttonGrantLocation"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/mauve"
-            android:text="@string/GrantLocation"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+            android:text="@string/GrantLocation" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/buttonGrantCamera"/>
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"

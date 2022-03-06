@@ -52,7 +52,7 @@
             android:button="@null"
             android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
             android:text="@string/is_available" android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="?attr/colorOnBackground"/>
+            android:textColor="?attr/colorOnBackground" tools:ignore="TouchTargetSizeCheck"/>
 
     </LinearLayout>
 
@@ -64,6 +64,6 @@
         android:layout_marginTop="-5dp"
         android:backgroundTint="@color/mauve"
         android:insetRight="0dp" android:insetBottom="0dp" app:icon="@drawable/delete" app:iconGravity="textStart"
-        app:iconPadding="0dp" app:iconSize="20dp"/>
+        app:iconPadding="0dp" app:iconSize="20dp" tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

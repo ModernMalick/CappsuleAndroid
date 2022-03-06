@@ -50,8 +50,7 @@
     <string name="Start">Cappsule vous proposera alors des tenues adaptées à vos besoins !</string>
     <string name="Next">Suivant</string>
     <string name="StartButton">Commencer</string>
-    <string name="NeedPermissionCamera">Cappsule à besoin d\'accéder à votre caméra afin de vous permettre d\'ajouter vos articles.</string>
-    <string name="NeedPermissionLocation">Cappsule à également besoin de connaître votre localisation afin de vous proposer des tenues convenables selon votre météo</string>
+    <string name="NeedPermission">Veuillez accorder les autorisations suivantes pour accéder aux fonctionnalités de Capsule</string>
     <string name="GrantCamera">Donner l\'accés à la caméra</string>
     <string name="GrantLocation">Donner l\'accés à la localisation</string>
     <string name="NeedsPermissions">Merci de donner les accés nécessaire afin de continuer.</string>
